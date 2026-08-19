@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grizzly Group | Build shop</title>
+  <meta name="description" content="Grizzly Group is Logan Spears’ tech development and consulting shop. Product software for operators who need the thing to actually work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pine: #12160f;
+      --bark: #1c2316;
+      --moss: #3d4a32;
+      --bone: #e6dcc8;
+      --paper: #f3ead6;
+      --copper: #c46a2b;
+      --ash: #8b8474;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--pine); color: var(--bone); }
+    body {
+      font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at 12% -10%, rgba(196, 106, 43, 0.16), transparent 28rem),
+        repeating-linear-gradient(180deg, transparent 0 47px, rgba(230, 220, 200, 0.025) 47px 48px),
+        var(--pine);
+    }
+    .wrap { width: min(1080px, calc(100% - 2rem)); margin: 0 auto; padding: 1.4rem 0 5rem; }
+    header {
+      display: flex; justify-content: space-between; align-items: end;
+      border-bottom: 1px solid rgba(230,220,200,.18); padding-bottom: 1.1rem;
+    }
+    .mark { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--copper); }
+    nav a { color: var(--bone); text-decoration: none; margin-left: 1.2rem; font-size: .95rem; border-bottom: 1px solid transparent; }
+    nav a:hover { border-bottom-color: var(--copper); }
+    .hero { display: grid; grid-template-columns: 1.3fr .7fr; gap: 2.5rem; padding: 4.2rem 0 3rem; }
+    h1 {
+      font-family: Fraunces, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.1rem);
+      line-height: .86; letter-spacing: -.04em; margin: 0 0 1.2rem; font-weight: 700;
+    }
+    h1 em { font-style: italic; color: var(--copper); font-weight: 500; }
+    .lede { font-size: 1.28rem; max-width: 34rem; color: var(--paper); }
+    .aside {
+      align-self: end; border-left: 3px solid var(--copper); padding: .2rem 0 .2rem 1rem;
+      font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .82rem; color: var(--ash); line-height: 1.7;
+    }
+    h2 { font-family: Fraunces, serif; font-size: 1.7rem; margin: 0 0 1rem; }
+    .work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    article {
+      background: var(--bark); padding: 1.25rem 1.15rem 1.35rem; min-height: 14rem;
+      border: 1px solid rgba(230,220,200,.08);
+    }
+    article span { font-family: "IBM Plex Mono", monospace; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--copper); }
+    article h3 { font-family: Fraunces, serif; font-size: 1.45rem; margin: .55rem 0 .5rem; }
+    article p { margin: 0; color: #cfc6b2; }
+    .how { margin-top: 3.2rem; display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem; align-items: start; }
+    .how ol { margin: 0; padding-left: 1.2rem; }
+    .how li { margin: 0 0 .7rem; }
+    footer {
+      margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(230,220,200,.18);
+      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    a.mail { color: var(--bone); }
+    @media (max-width: 800px) {
+      .hero, .work, .how { grid-template-columns: 1fr; }
+      header { align-items: start; flex-direction: column; gap: .8rem; }
+      nav a { margin: 0 1rem 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark">Grizzly Group</div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#how">How</a>
+        <a href="mailto:logan@grizzlygroup.co">Contact</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div>
+        <h1>Software for people who <em>run</em> things.</h1>
+        <p class="lede">Grizzly Group is a tech development and consulting shop. We build operator software: registration, ops dashboards, and the unglamorous systems that have to work on a Tuesday.</p>
+      </div>
+      <p class="aside">Pea Ridge, Arkansas<br />Logan Spears<br />Build, harden, ship<br />logan@grizzlygroup.co</p>
+    </section>
+    <section id="work">
+      <h2>In the field</h2>
+      <div class="work">
+        <article>
+          <span>Camps</span>
+          <h3>Roster Raccoon</h3>
+          <p>Event registration, housing, waivers, and director tools for camps that cannot lose a kid in a spreadsheet.</p>
+        </article>
+        <article>
+          <span>Golf ops</span>
+          <h3>Fairway</h3>
+          <p>Club operations on held data: reporting, member threads, and staff controls that do not invent a connected state.</p>
+        </article>
+        <article>
+          <span>Knowledge</span>
+          <h3>Rabbithole</h3>
+          <p>Research burrows for people who collect sources, then need the pile to become something they can actually use.</p>
+        </article>
+      </div>
+    </section>
+    <section class="how" id="how">
+      <h2>How we work</h2>
+      <ol>
+        <li>Reproduce the break or name the missing slice. No slide deck as a substitute.</li>
+        <li>Ship in the repo, then GitHub. Hosted buttons stay off until you say so.</li>
+        <li>Harden the path people actually use: auth, money, messages, and the public page.</li>
+        <li>One face for the client. Specialists stay in the shop.</li>
+      </ol>
+    </section>
+    <footer>
+      <div>© Grizzly Group</div>
+      <a class="mail" href="mailto:logan@grizzlygroup.co">logan@grizzlygroup.co</a>
+    </footer>
+  </div>
+</body>
+</html>
